@@ -1,0 +1,23 @@
+[[source]]
+url = "https://pypi.org/simple"
+verify_ssl = true
+name = "pypi"
+
+[[source]]
+url = "https://pypi.tuna.tsinghua.edu.cn/simple"
+verify_ssl = true
+name = "pypitunatsinghuaedu"
+
+[packages]
+pytesseract = "*"
+paddlepaddle = "*"
+paddleocr = "*"
+label-studio = "*"
+torch = "*"
+transformers = "*"
+numpy = "<1.24.0"
+
+[dev-packages]
+
+[requires]
+python_version = "3.11"

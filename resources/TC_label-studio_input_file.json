@@ -1,0 +1,554 @@
+[
+    {
+        "data": {
+            "ocr": "http://localhost:8080/license7.jpg"
+        },
+        "predictions": [
+            {
+                "result": [
+                    {
+                        "id": "4da4b17a-b",
+                        "from_name": "bbox",
+                        "to_name": "image",
+                        "type": "rectangle",
+                        "value": {
+                            "x": 25.3125,
+                            "y": 13.958333333333334,
+                            "width": 49.6875,
+                            "height": 4.166666666666667,
+                            "rotation": 0
+                        }
+                    },
+                    {
+                        "id": "4da4b17a-b",
+                        "from_name": "transcription",
+                        "to_name": "image",
+                        "type": "textarea",
+                        "value": {
+                            "text": [
+                                "GOVERNMENT OF NEPAL"
+                            ],
+                            "x": 25.3125,
+                            "y": 13.958333333333334,
+                            "width": 49.6875,
+                            "height": 4.166666666666667,
+                            "rotation": 0
+                        },
+                        "score": 0.5
+                    },
+                    {
+                        "id": "e809d4f7-e",
+                        "from_name": "bbox",
+                        "to_name": "image",
+                        "type": "rectangle",
+                        "value": {
+                            "x": 22.1875,
+                            "y": 20.0,
+                            "width": 55.9375,
+                            "height": 3.5416666666666665,
+                            "rotation": 0
+                        }
+                    },
+                    {
+                        "id": "e809d4f7-e",
+                        "from_name": "transcription",
+                        "to_name": "image",
+                        "type": "textarea",
+                        "value": {
+                            "text": [
+                                "NON PROFESSIONAL DRIVING LICENSE"
+                            ],
+                            "x": 22.1875,
+                            "y": 20.0,
+                            "width": 55.9375,
+                            "height": 3.5416666666666665,
+                            "rotation": 0
+                        },
+                        "score": 0.5
+                    },
+                    {
+                        "id": "ffc4244b-7",
+                        "from_name": "bbox",
+                        "to_name": "image",
+                        "type": "rectangle",
+                        "value": {
+                            "x": 8.125,
+                            "y": 26.458333333333332,
+                            "width": 27.96875,
+                            "height": 3.5416666666666665,
+                            "rotation": 0
+                        }
+                    },
+                    {
+                        "id": "ffc4244b-7",
+                        "from_name": "transcription",
+                        "to_name": "image",
+                        "type": "textarea",
+                        "value": {
+                            "text": [
+                                "D.L.No.:01-06-00093515"
+                            ],
+                            "x": 8.125,
+                            "y": 26.458333333333332,
+                            "width": 27.96875,
+                            "height": 3.5416666666666665,
+                            "rotation": 0
+                        },
+                        "score": 0.5
+                    },
+                    {
+                        "id": "dcb95ae2-f",
+                        "from_name": "bbox",
+                        "to_name": "image",
+                        "type": "rectangle",
+                        "value": {
+                            "x": 37.34375,
+                            "y": 25.625,
+                            "width": 45.46875,
+                            "height": 3.5416666666666665,
+                            "rotation": 0
+                        }
+                    },
+                    {
+                        "id": "dcb95ae2-f",
+                        "from_name": "transcription",
+                        "to_name": "image",
+                        "type": "textarea",
+                        "value": {
+                            "text": [
+                                "Name: YAN BAHADUR THAPA MAGAR"
+                            ],
+                            "x": 37.34375,
+                            "y": 25.625,
+                            "width": 45.46875,
+                            "height": 3.5416666666666665,
+                            "rotation": 0
+                        },
+                        "score": 0.5
+                    },
+                    {
+                        "id": "39a75d26-5",
+                        "from_name": "bbox",
+                        "to_name": "image",
+                        "type": "rectangle",
+                        "value": {
+                            "x": 8.125,
+                            "y": 31.666666666666668,
+                            "width": 10.0,
+                            "height": 3.75,
+                            "rotation": 0
+                        }
+                    },
+                    {
+                        "id": "39a75d26-5",
+                        "from_name": "transcription",
+                        "to_name": "image",
+                        "type": "textarea",
+                        "value": {
+                            "text": [
+                                "B.G.B+"
+                            ],
+                            "x": 8.125,
+                            "y": 31.666666666666668,
+                            "width": 10.0,
+                            "height": 3.75,
+                            "rotation": 0
+                        },
+                        "score": 0.5
+                    },
+                    {
+                        "id": "e43158b2-8",
+                        "from_name": "bbox",
+                        "to_name": "image",
+                        "type": "rectangle",
+                        "value": {
+                            "x": 37.96875,
+                            "y": 30.625,
+                            "width": 29.375,
+                            "height": 3.5416666666666665,
+                            "rotation": 0
+                        }
+                    },
+                    {
+                        "id": "e43158b2-8",
+                        "from_name": "transcription",
+                        "to_name": "image",
+                        "type": "textarea",
+                        "value": {
+                            "text": [
+                                "Address:Lakhanpur-05"
+                            ],
+                            "x": 37.96875,
+                            "y": 30.625,
+                            "width": 29.375,
+                            "height": 3.5416666666666665,
+                            "rotation": 0
+                        },
+                        "score": 0.5
+                    },
+                    {
+                        "id": "34399f24-f",
+                        "from_name": "bbox",
+                        "to_name": "image",
+                        "type": "rectangle",
+                        "value": {
+                            "x": 48.125,
+                            "y": 34.583333333333336,
+                            "width": 25.15625,
+                            "height": 3.5416666666666665,
+                            "rotation": 0
+                        }
+                    },
+                    {
+                        "id": "34399f24-f",
+                        "from_name": "transcription",
+                        "to_name": "image",
+                        "type": "textarea",
+                        "value": {
+                            "text": [
+                                "Ramechhap,Janakpur,"
+                            ],
+                            "x": 48.125,
+                            "y": 34.583333333333336,
+                            "width": 25.15625,
+                            "height": 3.5416666666666665,
+                            "rotation": 0
+                        },
+                        "score": 0.5
+                    },
+                    {
+                        "id": "2a0e7ca3-1",
+                        "from_name": "bbox",
+                        "to_name": "image",
+                        "type": "rectangle",
+                        "value": {
+                            "x": 48.90625,
+                            "y": 39.375,
+                            "width": 5.78125,
+                            "height": 3.75,
+                            "rotation": 0
+                        }
+                    },
+                    {
+                        "id": "2a0e7ca3-1",
+                        "from_name": "transcription",
+                        "to_name": "image",
+                        "type": "textarea",
+                        "value": {
+                            "text": [
+                                "Nops"
+                            ],
+                            "x": 48.90625,
+                            "y": 39.375,
+                            "width": 5.78125,
+                            "height": 3.75,
+                            "rotation": 0
+                        },
+                        "score": 0.5
+                    },
+                    {
+                        "id": "2a4db662-0",
+                        "from_name": "bbox",
+                        "to_name": "image",
+                        "type": "rectangle",
+                        "value": {
+                            "x": 37.96875,
+                            "y": 44.791666666666664,
+                            "width": 21.09375,
+                            "height": 4.166666666666667,
+                            "rotation": 0
+                        }
+                    },
+                    {
+                        "id": "2a4db662-0",
+                        "from_name": "transcription",
+                        "to_name": "image",
+                        "type": "textarea",
+                        "value": {
+                            "text": [
+                                "D.O.B15-03-1983"
+                            ],
+                            "x": 37.96875,
+                            "y": 44.791666666666664,
+                            "width": 21.09375,
+                            "height": 4.166666666666667,
+                            "rotation": 0
+                        },
+                        "score": 0.5
+                    },
+                    {
+                        "id": "e3136909-f",
+                        "from_name": "bbox",
+                        "to_name": "image",
+                        "type": "rectangle",
+                        "value": {
+                            "x": 37.8125,
+                            "y": 50.0,
+                            "width": 34.21875,
+                            "height": 4.166666666666667,
+                            "rotation": 0
+                        }
+                    },
+                    {
+                        "id": "e3136909-f",
+                        "from_name": "transcription",
+                        "to_name": "image",
+                        "type": "textarea",
+                        "value": {
+                            "text": [
+                                "F/H Name:Jit B.Thapa Magar"
+                            ],
+                            "x": 37.8125,
+                            "y": 50.0,
+                            "width": 34.21875,
+                            "height": 4.166666666666667,
+                            "rotation": 0
+                        },
+                        "score": 0.5
+                    },
+                    {
+                        "id": "afd0a385-7",
+                        "from_name": "bbox",
+                        "to_name": "image",
+                        "type": "rectangle",
+                        "value": {
+                            "x": 37.65625,
+                            "y": 55.416666666666664,
+                            "width": 25.625,
+                            "height": 4.166666666666667,
+                            "rotation": 0
+                        }
+                    },
+                    {
+                        "id": "afd0a385-7",
+                        "from_name": "transcription",
+                        "to_name": "image",
+                        "type": "textarea",
+                        "value": {
+                            "text": [
+                                "Citizenship No.:42663"
+                            ],
+                            "x": 37.65625,
+                            "y": 55.416666666666664,
+                            "width": 25.625,
+                            "height": 4.166666666666667,
+                            "rotation": 0
+                        },
+                        "score": 0.5
+                    },
+                    {
+                        "id": "9a458ab0-7",
+                        "from_name": "bbox",
+                        "to_name": "image",
+                        "type": "rectangle",
+                        "value": {
+                            "x": 75.3125,
+                            "y": 57.083333333333336,
+                            "width": 15.9375,
+                            "height": 3.75,
+                            "rotation": 0
+                        }
+                    },
+                    {
+                        "id": "9a458ab0-7",
+                        "from_name": "transcription",
+                        "to_name": "image",
+                        "type": "textarea",
+                        "value": {
+                            "text": [
+                                "Category:B,A"
+                            ],
+                            "x": 75.3125,
+                            "y": 57.083333333333336,
+                            "width": 15.9375,
+                            "height": 3.75,
+                            "rotation": 0
+                        },
+                        "score": 0.5
+                    },
+                    {
+                        "id": "55eb154d-f",
+                        "from_name": "bbox",
+                        "to_name": "image",
+                        "type": "rectangle",
+                        "value": {
+                            "x": 8.125,
+                            "y": 60.208333333333336,
+                            "width": 20.0,
+                            "height": 3.5416666666666665,
+                            "rotation": 0
+                        }
+                    },
+                    {
+                        "id": "55eb154d-f",
+                        "from_name": "transcription",
+                        "to_name": "image",
+                        "type": "textarea",
+                        "value": {
+                            "text": [
+                                "D.O.L:26-09-2002"
+                            ],
+                            "x": 8.125,
+                            "y": 60.208333333333336,
+                            "width": 20.0,
+                            "height": 3.5416666666666665,
+                            "rotation": 0
+                        },
+                        "score": 0.5
+                    },
+                    {
+                        "id": "0909e152-0",
+                        "from_name": "bbox",
+                        "to_name": "image",
+                        "type": "rectangle",
+                        "value": {
+                            "x": 37.8125,
+                            "y": 61.458333333333336,
+                            "width": 15.46875,
+                            "height": 3.5416666666666665,
+                            "rotation": 0
+                        }
+                    },
+                    {
+                        "id": "0909e152-0",
+                        "from_name": "transcription",
+                        "to_name": "image",
+                        "type": "textarea",
+                        "value": {
+                            "text": [
+                                "Passport No.:"
+                            ],
+                            "x": 37.8125,
+                            "y": 61.458333333333336,
+                            "width": 15.46875,
+                            "height": 3.5416666666666665,
+                            "rotation": 0
+                        },
+                        "score": 0.5
+                    },
+                    {
+                        "id": "7d8f64e2-8",
+                        "from_name": "bbox",
+                        "to_name": "image",
+                        "type": "rectangle",
+                        "value": {
+                            "x": 8.125,
+                            "y": 64.58333333333333,
+                            "width": 21.09375,
+                            "height": 3.5416666666666665,
+                            "rotation": 0
+                        }
+                    },
+                    {
+                        "id": "7d8f64e2-8",
+                        "from_name": "transcription",
+                        "to_name": "image",
+                        "type": "textarea",
+                        "value": {
+                            "text": [
+                                "D.O.E:23-08-2017"
+                            ],
+                            "x": 8.125,
+                            "y": 64.58333333333333,
+                            "width": 21.09375,
+                            "height": 3.5416666666666665,
+                            "rotation": 0
+                        },
+                        "score": 0.5
+                    },
+                    {
+                        "id": "35542cfa-1",
+                        "from_name": "bbox",
+                        "to_name": "image",
+                        "type": "rectangle",
+                        "value": {
+                            "x": 37.8125,
+                            "y": 65.41666666666667,
+                            "width": 27.65625,
+                            "height": 4.166666666666667,
+                            "rotation": 0
+                        }
+                    },
+                    {
+                        "id": "35542cfa-1",
+                        "from_name": "transcription",
+                        "to_name": "image",
+                        "type": "textarea",
+                        "value": {
+                            "text": [
+                                "Phone No.:9841014418"
+                            ],
+                            "x": 37.8125,
+                            "y": 65.41666666666667,
+                            "width": 27.65625,
+                            "height": 4.166666666666667,
+                            "rotation": 0
+                        },
+                        "score": 0.5
+                    },
+                    {
+                        "id": "38d41510-b",
+                        "from_name": "bbox",
+                        "to_name": "image",
+                        "type": "rectangle",
+                        "value": {
+                            "x": 14.375,
+                            "y": 83.95833333333333,
+                            "width": 11.71875,
+                            "height": 3.75,
+                            "rotation": 0
+                        }
+                    },
+                    {
+                        "id": "38d41510-b",
+                        "from_name": "transcription",
+                        "to_name": "image",
+                        "type": "textarea",
+                        "value": {
+                            "text": [
+                                "Issued By"
+                            ],
+                            "x": 14.375,
+                            "y": 83.95833333333333,
+                            "width": 11.71875,
+                            "height": 3.75,
+                            "rotation": 0
+                        },
+                        "score": 0.5
+                    },
+                    {
+                        "id": "9d911971-2",
+                        "from_name": "bbox",
+                        "to_name": "image",
+                        "type": "rectangle",
+                        "value": {
+                            "x": 68.59375,
+                            "y": 82.70833333333333,
+                            "width": 22.34375,
+                            "height": 3.5416666666666665,
+                            "rotation": 0
+                        }
+                    },
+                    {
+                        "id": "9d911971-2",
+                        "from_name": "transcription",
+                        "to_name": "image",
+                        "type": "textarea",
+                        "value": {
+                            "text": [
+                                "Signature of Holder"
+                            ],
+                            "x": 68.59375,
+                            "y": 82.70833333333333,
+                            "width": 22.34375,
+                            "height": 3.5416666666666665,
+                            "rotation": 0
+                        },
+                        "score": 0.5
+                    }
+                ],
+                "score": 0.97
+            }
+        ]
+    }
+]
