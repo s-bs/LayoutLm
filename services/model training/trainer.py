@@ -7,9 +7,9 @@ import torch.nn.functional as F
 from transformers import LayoutLMv3ForTokenClassification
 import torch.nn.functional as nnf
 
-
-def loss_fn(pred,target):
-    return nn.CrossEntropyLoss()(pred.view(-1,14),target.view(-1))
+class TRAIN:
+    def loss_fn(pred,target):
+        return nn.CrossEntropyLoss()(pred.view(-1,14),target.view(-1))
 
 
 class ModelModule(nn.Module):
@@ -30,6 +30,6 @@ class ModelModule(nn.Module):
 
         print("Probability score :", prob)
         print("top_p, top_class ",top_p, top_class)
-        loss = loss_fn(output,lables)
+        loss = TRAIN.loss_fn(output,lables)
 
-        return  output, loss
+        return  output#, loss

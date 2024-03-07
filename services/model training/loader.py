@@ -1,6 +1,6 @@
 # Loader
 
-from utils import *
+from utils import UTILS
 import torch
 from tqdm import tqdm
 from PIL import Image
@@ -8,7 +8,7 @@ from PIL import Image
 
 class dataSet:
     def __init__(self,json_path,processor=None) -> None:
-        self.json_data = train_data_format(read_json(json_path))
+        self.json_data = UTILS.train_data_format(UTILS.read_json(json_path))
 
         self.processor = processor
 

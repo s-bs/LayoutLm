@@ -1,24 +1,24 @@
 import json
+class LTOL:
+	def convert_bounding_box(x, y, width, height):
+		"""Converts the given bounding box coordinates to the YOLO format.
 
-def convert_bounding_box(x, y, width, height):
-	"""Converts the given bounding box coordinates to the YOLO format.
+		Args:
+		x: The x-coordinate of the top-left corner of the bounding box.
+		y: The y-coordinate of the top-left corner of the bounding box.
+		width: The width of the bounding box.
+		height: The height of the bounding box.
 
-	Args:
-	x: The x-coordinate of the top-left corner of the bounding box.
-	y: The y-coordinate of the top-left corner of the bounding box.
-	width: The width of the bounding box.
-	height: The height of the bounding box.
+		Returns:
+		A tuple of four coordinates (x1, y1, x2, y2) in the YOLO format.
+		"""
 
-	Returns:
-	A tuple of four coordinates (x1, y1, x2, y2) in the YOLO format.
-	"""
+		x1 = x
+		y1 = y
+		x2 = x + width
+		y2 = y + height
 
-	x1 = x
-	y1 = y
-	x2 = x + width
-	y2 = y + height
-
-	return [x1, y1, x2, y2]
+		return [x1, y1, x2, y2]
 
 
 
@@ -60,7 +60,7 @@ for annoatated_image in data:
 
 		print('text :', text)
 
-		ann_dict["box"] = convert_bounding_box(bb['x'], bb['y'], bb['width'], bb['height'])
+		ann_dict["box"] = LTOL.convert_bounding_box(bb['x'], bb['y'], bb['width'], bb['height'])
 		ann_dict["text"] = text
 		ann_dict["label"] = label['labels'][-1]
 		ann_list.append(ann_dict)

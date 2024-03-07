@@ -6,7 +6,7 @@ from trainer import *
 from loader import *
 from torch.optim import AdamW
 import numpy as np 
-from engine import *
+from engine import ENGINE
 
 
 featur_extractor = LayoutLMv3FeatureExtractor(apply_ocr=False)
@@ -32,7 +32,7 @@ if __name__ == "__main__":
     loss_list = []
     for epoch in range(30):
         # Training
-        train_loss = train_fn(dataload, model, optimizer)
+        train_loss = ENGINE.train_fn(dataload, model, optimizer)
         # print(model.parameters)
         # break
 
@@ -52,7 +52,7 @@ if __name__ == "__main__":
 
 
         # evaluation
-        eval_loss = eval_fn(dataload, model)
+        eval_loss = ENGINE.eval_fn(dataload, model)
         print("Evaluation loss :",  eval_loss)
 
     np.array(loss_list).dump(open('loss_list.npy', 'wb'))

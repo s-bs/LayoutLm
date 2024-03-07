@@ -5,7 +5,7 @@ import numpy as np
 from engine import *
 from trainer import *
 from loader import *
-from utils import *
+from utils import UTILS
 from transformers import LayoutLMv3FeatureExtractor, LayoutLMv3TokenizerFast, LayoutLMv3Processor, LayoutLMv3ForTokenClassification
 
 
@@ -16,14 +16,14 @@ processor = LayoutLMv3Processor(tokenizer=tokeniser,feature_extractor=featur_ext
 
 
 # Load the image
-image = Image.open("D:/Python/visual-ocr-label/License Data-sets - Copy/license7.jpg")
+image = Image.open("D:/Python/visual-ocr-label/License Data-sets/license6.jpg")
 image.show()
-test_dict, width_scale, height_scale = dataSetFormat(image)
+test_dict, width_scale, height_scale = UTILS.dataSetFormat(image)
 
 print("test_dict['bboxes'] :",test_dict['bboxes'])
 
 
-model = ModelModule(13)
+model = ModelModule(14)
 encoding = processor(
                         test_dict['img_path'].convert('RGB'),
                         test_dict['tokens'],
@@ -36,7 +36,7 @@ encoding = processor(
 
 print(" encoding ",encoding['bbox'])
 
-model.load_state_dict(torch.load("D:/Python/visual-ocr-label/model_20.bin"))
+model.load_state_dict(torch.load("D:/Python/visual-ocr-label/model/model_20.bin"))
 
 
 inputs_ids = torch.tensor(encoding['input_ids'], dtype=torch.int64).flatten()
@@ -72,7 +72,7 @@ true_boxes = torch.tensor([box.tolist() for idx, box in enumerate(bbox) if not i
 concat_torch = torch.column_stack((true_boxes, true_predictions, true_prob))
 
 
-one_class = concat_torch[torch.where((concat_torch[:,13]==1) & (concat_torch[:,12]==0)  & (concat_torch[:,11]==0))]
+one_class = concat_torch[torch.where((concat_torch[:,14]==1) & (concat_torch[:,13]==0)  & (concat_torch[:,12]==0))]
 # two_class = concat_torch[torch.where((concat_torch[:,4]==2) & (concat_torch[:,3]==0)  & (concat_torch[:,2]==0))]
 # three_class = concat_torch[torch.where((concat_torch[:,4]==3) & (concat_torch[:,3]==0)  & (concat_torch[:,2]==0))]
 # four_class = concat_torch[torch.where((concat_torch[:,4]==4) & (concat_torch[:,3]==0)  & (concat_torch[:,2]==0))]
@@ -81,7 +81,7 @@ one_class = concat_torch[torch.where((concat_torch[:,13]==1) & (concat_torch[:,1
 finl = torch.row_stack((one_class))
 unique_ = torch.unique(finl, dim=0)
 
-plot_img(test_dict['img_path'], unique_[:, :13] ,unique_[:, 13].tolist(), unique_[:, 14].tolist(), width_scale, height_scale)
+UTILS.plot_img(test_dict['img_path'], unique_[:, :14] ,unique_[:, 14].tolist(), unique_[:, 15].tolist(), width_scale, height_scale)
 
 
 print(unique_)

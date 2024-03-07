@@ -9,13 +9,12 @@ verify_ssl = true
 name = "pypitunatsinghuaedu"
 
 [packages]
-pytesseract = "*"
-paddlepaddle = "*"
-paddleocr = "*"
-label-studio = "*"
-torch = "*"
+numpy = "*"
 transformers = "*"
-numpy = "<1.24.0"
+torch = "*"
+label-studio = "*"
+paddlepaddle = {version = "*", index = "pypitunatsinghuaedu"}
+paddleocr = ">=2.0.1"
 
 [dev-packages]
 
