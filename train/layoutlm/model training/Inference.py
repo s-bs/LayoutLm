@@ -16,7 +16,7 @@ processor = LayoutLMv3Processor(tokenizer=tokeniser,feature_extractor=featur_ext
 
 
 # Load the image
-image = Image.open("D:/Python/visual-ocr-label/License Data-sets/license6.jpg")
+image = Image.open("D:/Python/visual-ocr-label/dataset/license6.jpg")
 image.show()
 test_dict, width_scale, height_scale = UTILS.dataSetFormat(image)
 

@@ -4,6 +4,7 @@ from PIL import Image, ImageDraw, ImageFont
 import json
 from uuid import uuid4
 import numpy as np
+# TODO chane variable case type and refactor code
 
 class PADDLE:
     # loading the engine
@@ -47,7 +48,7 @@ class PADDLE:
 
         return [x, y, width, height]
 
-    def create_image_url(filename):
+    def create_image_url(self,filename):
         """
         Label Studio requires image URLs, so this defines the mapping from filesystem to URLs
         if you use ./serve_local_files.sh <my-images-dir>, the image URLs are localhost:8081/filename.png
@@ -57,7 +58,7 @@ class PADDLE:
 
 
 
-    def extracted_tables_to_label_studio_json_file_with_paddleOCR(images_folder_path):
+    def extracted_tables_to_label_studio_json_file_with_paddleOCR(self,images_folder_path):
         label_studio_task_list = []
         for images in os.listdir(images_folder_path):
             if images.endswith('.jpg'):
