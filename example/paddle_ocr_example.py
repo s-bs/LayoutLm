@@ -3,10 +3,13 @@
 -- Treeleaf Technologies Pvt. Ltd.
 -- Created on 2024-03-12
 """
-from services.ocr.paddle_ocr import PADDLE
+import sys
+sys.path.append(r'D:\Python\visual-ocr-label\services\ocr')
+import paddle_ocr
+
 
 # TODO call paddleOCR service and show result
 if __name__ == '__main__':
-    image_path = ""
-    paddle_ocr = PADDLE()
-    paddle_ocr.detect_text(image=image_path)
+    images_folder_path = "resources\image"
+    paddle_ocr_obj = paddle_ocr.Paddle()
+    paddle_ocr_obj.extracted_tables_to_label_studio_json_file_with_paddleOCR(images_folder_path)

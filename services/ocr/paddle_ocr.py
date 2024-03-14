@@ -1,4 +1,5 @@
 import os
+from baseocr import BaseOCR
 from paddleocr import PaddleOCR
 from PIL import Image, ImageDraw, ImageFont
 import json
@@ -6,7 +7,7 @@ from uuid import uuid4
 import numpy as np
 # TODO chane variable case type and refactor code
 
-class PADDLE:
+class Paddle(BaseOCR):
     # loading the engine
     # OCR enginer
     ocr = PaddleOCR(use_angle_cls=False, 
@@ -15,10 +16,10 @@ class PADDLE:
                     ) # need to run only once to download and load model into memory 
 
 
-    images_folder_path  = "D:\\Python\\visual-ocr-label" 
+    # images_folder_path  = "D:\\Python\\visual-ocr-label" 
 
 
-    def create_image_url(filename):
+    def create_image_url(self,filename: str)-> str:
         """
         Label Studio requires image URLs, so this defines the mapping from filesystem to URLs
         if you use ./serve_local_files.sh <my-images-dir>, the image URLs are localhost:8081/filename.png
@@ -28,27 +29,27 @@ class PADDLE:
 
 
 
-    def convert_bounding_box(bounding_box):
-        """Converts a bounding box of [x1, y1, x2, y2] into [x, y, height, width].
+    # def convert_bounding_box(bounding_box):
+    #     """Converts a bounding box of [x1, y1, x2, y2] into [x, y, height, width].
 
-        Args:
-        bounding_box: A list of four numbers, representing the x1, y1, x2, and y2
-            coordinates of the bounding box.
+    #     Args:
+    #     bounding_box: A list of four numbers, representing the x1, y1, x2, and y2
+    #         coordinates of the bounding box.
 
-        Returns:
-        A list of four numbers, representing the x, y, height, and width of the
-            bounding box.
-        """
+    #     Returns:
+    #     A list of four numbers, representing the x, y, height, and width of the
+    #         bounding box.
+    #     """
 
-        x1, y1, x2, y2 = bounding_box
-        x = min(x1, x2)
-        y = min(y1, y2)
-        width = x2 - x1
-        height = y2 - y1
+    #     x1, y1, x2, y2 = bounding_box
+    #     x = min(x1, x2)
+    #     y = min(y1, y2)
+    #     width = x2 - x1
+    #     height = y2 - y1
 
-        return [x, y, width, height]
+    #     return [x, y, width, height]
 
-    def create_image_url(self,filename):
+    def create_image_url(self,filename: str)-> str:
         """
         Label Studio requires image URLs, so this defines the mapping from filesystem to URLs
         if you use ./serve_local_files.sh <my-images-dir>, the image URLs are localhost:8081/filename.png
@@ -58,7 +59,7 @@ class PADDLE:
 
 
 
-    def extracted_tables_to_label_studio_json_file_with_paddleOCR(self,images_folder_path):
+    def extracted_tables_to_label_studio_json_file(self,images_folder_path: str)-> None:
         label_studio_task_list = []
         for images in os.listdir(images_folder_path):
             if images.endswith('.jpg'):
@@ -67,7 +68,7 @@ class PADDLE:
 
                 print(images)
 
-                output_json['data'] =  {"ocr":PADDLE.create_image_url(images)}
+                output_json['data'] =  {"ocr":self.create_image_url(images)}
 
                         
                 img = Image.open(f'D:\\Python\\visual-ocr-label\\{images}')
@@ -76,7 +77,7 @@ class PADDLE:
                 image_height, image_width = img.shape[:2]
 
 
-                result = PADDLE.ocr.ocr(img,cls=False)
+                result = Paddle.ocr.ocr(img,cls=False)
 
                 #print(result)
 
@@ -122,4 +123,4 @@ class PADDLE:
             json.dump(label_studio_task_list, f, indent=4)
 
 
-    extracted_tables_to_label_studio_json_file_with_paddleOCR(images_folder_path)
+    # extracted_tables_to_label_studio_json_file_with_paddleOCR(images_folder_path)
